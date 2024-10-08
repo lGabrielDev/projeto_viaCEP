@@ -34,6 +34,5 @@ services:
             - spring.datasource.password=${SENHA}
         volumes:
             - volume_relatorio:/app/relatorios # Os relatorios criados no container tambem serao criados na nossa maquina local
-            - volume_clientes:/var/lib/postgresql/data
         networks:
             - rede_clientes
