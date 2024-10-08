@@ -1,0 +1,39 @@
+
+volumes:
+    volume_clientes:
+    volume_relatorio:
+
+networks:
+    rede_clientes:
+
+services:
+    container_postgres:
+        image: postgres:13.16
+        environment:
+            - POSTGRES_USER=${USUARIO}
+            - POSTGRES_PASSWORD=${SENHA}
+            - POSTGRES_DB=${BANCO}
+        ports:
+            - 2222:5432 # Nos conectamos com esse container atraves da 2222 do nosso PC local
+        volumes:
+            - volume_clientes:/var/lib/postgresql/data
+        networks:
+            - rede_clientes
+
+    container_backend:
+        depends_on: # esse container só vai rodar, se o container do postgres der certo
+            - container_postgres
+        build:
+            context: .
+        image: clientes_image
+        ports:
+            - 8080:8080 # vamos acessar esse container atraves da porta 8080 do nosso PC local
+        environment:
+            - spring.datasource.url=jdbc:postgresql://container_postgres:5432/${BANCO}
+            - spring.datasource.username=${USUARIO}
+            - spring.datasource.password=${SENHA}
+        volumes:
+            - volume_relatorio:/app/relatorios # Os relatorios criados no container tambem serao criados na nossa maquina local
+            - volume_clientes:/var/lib/postgresql/data
+        networks:
+            - rede_clientes
