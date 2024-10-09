@@ -1,7 +1,6 @@
 <!-- title -->
 <h1 align="center">
     <span>Projeto ViaCEP</span>
-    <img src="src/main/resources/static/img/viacep_logo.svg" alt="clientes project image" width="400px" align="center"> <!-- alterar imagem src-->
 </h1>
 
 <br>
