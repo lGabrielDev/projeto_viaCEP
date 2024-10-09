@@ -258,10 +258,13 @@ Todas as exceções foram personalizadas para um melhor entendimento do usuário
 
 <p>As imagens usadas nesse projeto foram retiradas dos seguintes sites:</p>
 
+- [viaCEP](https://viacep.com.br/)
 - [shields.io](https://shields.io/)
 - [iconfinder](https://www.iconfinder.com/)
 - [storyset](https://storyset.com/)
 - [vecteezy](https://www.vecteezy.com)
+
+
 
 <span>Thanks!</span>
 
@@ -272,7 +275,7 @@ Todas as exceções foram personalizadas para um melhor entendimento do usuário
 <!-- License -->
 ## <img src="https://cdn4.iconfinder.com/data/icons/jetflat-2-multimedia-vol-3/60/0042_049_license_agreement_file_document_paper_page_sheet-512.png" alt="todo list image icon" width="40px" align="center"> Licença --> MIT
 
-O projeto está sob a licença do [MIT](../../../../LICENSE.txt).
+O projeto está sob a licença do [MIT](LICENSE).
 
 <hr>
 <br>
