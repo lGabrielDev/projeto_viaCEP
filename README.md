@@ -219,7 +219,7 @@ Todas as exceções foram personalizadas para um melhor entendimento do usuário
 
 1. Clone esse repositório
     ```bash
-    git clone hhttps://github.com/lGabrielDev/projeto_viaCEP
+    git clone https://github.com/lGabrielDev/projeto_viaCEP
     ```
 <br>
 
