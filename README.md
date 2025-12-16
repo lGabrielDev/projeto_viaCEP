@@ -237,10 +237,12 @@ Todas as exceções foram personalizadas para um melhor entendimento do usuário
 
 <br>
 
-4.  Suba os containers
+4.  Rode os comandos de execução:
 
     ```bash
-    docker compose up -d;
+     mvn clean package -DskipTests;  # Compila o código Java e gera o arquivo .jar
+     docker pull openjdk:17-ea-10-jdk;  # Baixa a imagem base do OpenJDK 17.
+     docker compose up --build; # Constrói as imagens Docker e sobe os containers
     ```
 
 <br>
